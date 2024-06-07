@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/paoloyx/conventional-releases/compare/v1.1.0...v2.0.0) (2024-06-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove bad route ([#9](https://github.com/paoloyx/conventional-releases/issues/9))
+
+### Features
+
+* remove bad route ([#9](https://github.com/paoloyx/conventional-releases/issues/9)) ([7e37be8](https://github.com/paoloyx/conventional-releases/commit/7e37be80a057fb8f661fbe9de9b23e43b0f999b5))
+
 ## [1.1.0](https://github.com/paoloyx/conventional-releases/compare/v1.0.0...v1.1.0) (2024-06-07)
 
 
