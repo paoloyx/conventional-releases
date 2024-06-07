@@ -8,7 +8,7 @@ func main() {
 	r := gin.Default()
 
 	r.GET("/", func(c *gin.Context) {
-		c.String(200, "Hello, World!!")
+		c.String(200, "Hello, World!")
 	})
 
 	// Custom route to greet user
