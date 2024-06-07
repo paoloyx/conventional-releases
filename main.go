@@ -11,5 +11,11 @@ func main() {
 		c.String(200, "Hello, World!")
 	})
 
+	// Custom route to greet user
+	r.GET("/hello/:name", func(c *gin.Context) {
+		name := c.Param("name")
+		c.String(200, "Hello, %s!", name)
+	})
+
 	r.Run(":8080") // Avvia il server sulla porta 8080
 }
