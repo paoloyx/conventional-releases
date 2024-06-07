@@ -16,3 +16,5 @@ jobs:
       - uses: amannn/action-semantic-pull-request@v5
         with:
           wip: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
