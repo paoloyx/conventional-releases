@@ -1,0 +1,17 @@
+name: Log Tag Creation
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  log-tag:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Log tag creation
+        run: echo "A new tag has been created: ${{ github.ref }}"
