@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.2.0](https://github.com/paoloyx/conventional-releases/compare/v2.1.0...v2.2.0) (2024-06-10)
+
+
+### Features
+
+* add tag creation workflow ([#14](https://github.com/paoloyx/conventional-releases/issues/14)) ([0941fc1](https://github.com/paoloyx/conventional-releases/commit/0941fc1f63ed78cdb867cd6f8c0e918acba8c96a))
+
+
+### Bug Fixes
+
+* add tag creation workflow ([391ff90](https://github.com/paoloyx/conventional-releases/commit/391ff9089350af54f4835ca3d2f466e82b789427))
+
 ## [2.1.0](https://github.com/paoloyx/conventional-releases/compare/v2.0.0...v2.1.0) (2024-06-07)
 
 
