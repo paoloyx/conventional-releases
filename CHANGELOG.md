@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.2](https://github.com/paoloyx/conventional-releases/compare/v2.3.1...v2.3.2) (2024-06-10)
+
+
+### Bug Fixes
+
+* update tag-created.yml ([836aa54](https://github.com/paoloyx/conventional-releases/commit/836aa54f8b307878735d83cfc92db3f461c34411))
+
 ## [2.3.1](https://github.com/paoloyx/conventional-releases/compare/v2.3.0...v2.3.1) (2024-06-10)
 
 
