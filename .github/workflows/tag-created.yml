@@ -6,7 +6,6 @@ on:
 jobs:
   log-tag:
     runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/')
 
     steps:
       - name: Checkout code
