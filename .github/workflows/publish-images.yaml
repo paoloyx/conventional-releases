@@ -15,8 +15,8 @@ jobs:
       - name: Login to Docker Registry
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
       - name: Log
         run: |
           echo Building: ${{ inputs.image }}:${{ inputs.tag }} image
