@@ -26,9 +26,19 @@ jobs:
     name: Trivy Scan
     runs-on: "ubuntu-20.04"
     steps:
+      - name: Initialize Energy Estimation
+        uses: green-coding-solutions/eco-ci-energy-estimation@v3
+        with:
+          task: start-measurement
+        continue-on-error: true
       - name: Checkout code
         uses: actions/checkout@v4
-
+      - name: Checkout Repo Measurement
+        uses: green-coding-solutions/eco-ci-energy-estimation@v3
+        with:
+          task: get-measurement
+          label: 'repo checkout'
+        continue-on-error: true
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@7b7aa264d83dc58691451798b4d117d53d21edfe
         with:
@@ -37,8 +47,25 @@ jobs:
           format: 'sarif'
           output: 'trivy-results.sarif'
           severity: 'HIGH,CRITICAL'
-
+      - name: Trivy Scan Measurement
+        uses: green-coding-solutions/eco-ci-energy-estimation@v3
+        with:
+          task: get-measurement
+          label: 'Trivy scan done'
+        continue-on-error: true
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: 'trivy-results.sarif'
+      - name: Trivy Results Upload Measurement
+        uses: green-coding-solutions/eco-ci-energy-estimation@v3
+        with:
+          task: get-measurement
+          label: 'Trivy scan done'
+        continue-on-error: true
+      - name: Show Energy Results
+        uses: green-coding-solutions/eco-ci-energy-estimation@v3 # use hash or @vX here (See note below)
+        with:
+          task: display-results
+          pr-comment: true
+        continue-on-error: true
