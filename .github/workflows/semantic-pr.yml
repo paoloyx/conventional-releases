@@ -30,7 +30,7 @@ jobs:
           ELECTRICITY_MAPS_TOKEN: ${{ secrets.ELECTRICITY_MAPS_TOKEN }}
         with:
           task: get-measurement
-          label: 'trivy scan'
+          label: 'semantic PR check done'
         continue-on-error: true
       - name: Show Energy Results
         uses: green-coding-solutions/eco-ci-energy-estimation@v3 # use hash or @vX here (See note below)
