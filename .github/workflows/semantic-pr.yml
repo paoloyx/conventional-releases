@@ -14,8 +14,28 @@ jobs:
     name: Validate PR title
     runs-on: ubuntu-22.04
     steps:
+      - name: Initialize Energy Estimation
+        uses: green-coding-solutions/eco-ci-energy-estimation@v3
+        with:
+          task: start-measurement
+        continue-on-error: true # recommended setting for production. See notes below.
       - uses: amannn/action-semantic-pull-request@v5
         with:
           wip: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout Repo Measurement
+        uses: green-coding-solutions/eco-ci-energy-estimation@v3 # use hash or @vX here (See note below)
+        env:
+          ELECTRICITY_MAPS_TOKEN: ${{ secrets.ELECTRICITY_MAPS_TOKEN }}
+        with:
+          task: get-measurement
+          label: 'semantic PR check done'
+        continue-on-error: true
+      - name: Show Energy Results
+        uses: green-coding-solutions/eco-ci-energy-estimation@v3 # use hash or @vX here (See note below)
+        env:
+          ELECTRICITY_MAPS_TOKEN: ${{ secrets.ELECTRICITY_MAPS_TOKEN }}
+        with:
+          task: display-results
+        continue-on-error: true
