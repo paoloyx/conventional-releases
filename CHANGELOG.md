@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.3.4](https://github.com/paoloyx/conventional-releases/compare/v2.3.3...v2.3.4) (2024-06-19)
+
+
+### Bug Fixes
+
+* docker build ([c763fdb](https://github.com/paoloyx/conventional-releases/commit/c763fdbcd70909d23ab2ba843b6acc79d768bbb0))
+* docker build ([6329747](https://github.com/paoloyx/conventional-releases/commit/6329747e36d369606cfc4a9d2cca61f59a431209))
+* docker build ([ee8ef82](https://github.com/paoloyx/conventional-releases/commit/ee8ef82407a1f976b087f5138f6b0b54380685a5))
+* docker build ([7f36a07](https://github.com/paoloyx/conventional-releases/commit/7f36a07a7ac62c9902945205f9377edbe0d3d852))
+* dockerfile ([36be0ed](https://github.com/paoloyx/conventional-releases/commit/36be0ed25a28b866ca8e139dbc01a87e3beadf4b))
+
 ## [2.3.3](https://github.com/paoloyx/conventional-releases/compare/v2.3.2...v2.3.3) (2024-06-10)
 
 
